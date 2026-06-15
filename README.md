@@ -12,7 +12,7 @@ PM Agent
 SA Agent
    ↓
 RD Pool
-   ├─ Frontend RD：React 專家，自行判斷專案 UI 設計風格
+   ├─ Frontend RD：Angular 專家，自行判斷專案 UI 設計風格
    └─ Backend RD：資深 Java / Spring Boot 工程師，重視 OOP 與 Design Pattern
    ↓
 QA Agent
@@ -46,14 +46,14 @@ SA 是系統分析與設計者。
 
 ### Frontend RD Agent
 
-Frontend RD 是 React 專家。
+Frontend RD 是 Angular 專家。
 
 特色：
 
-- 專門寫 React 前端
-- 會自行判斷專案使用的設計風格，例如 Material UI、Ant Design、Tailwind、Bootstrap、自研 Design System
+- 專門寫 Angular 前端
+- 會自行判斷專案使用的設計風格，例如 Angular Material、PrimeNG、Bootstrap、自研 Design System
 - 不會硬套風格，會先觀察既有專案結構
-- 負責 UI component、頁面、表單、狀態管理、API 串接
+- 負責 component、頁面、Reactive Form、狀態處理、API 串接
 
 ### Backend RD Agent
 
@@ -66,6 +66,7 @@ Backend RD 是資深 Java / Spring Boot 工程師。
 - 設計風格偏 OOP
 - 喜歡用 Design Pattern 寫出乾淨、可維護、優雅的 code
 - 重視分層、封裝、可測試性、交易一致性與錯誤處理
+- 是純軟體 RD，不負責 IaC、DevOps、SRE、平台維運工作
 
 ### QA Agent
 
@@ -93,12 +94,12 @@ codex
 請依照 AGENTS.md 的 multi-agent workflow 執行任務。
 
 任務：
-新增使用者管理功能，包含前端 React 頁面與後端 Spring Boot API。
+新增使用者管理功能，包含前端 Angular 頁面與後端 Spring Boot API。
 
 請依序讓：
 1. PM 先釐清需求
 2. SA 根據 PM 結果規劃 SD 與拆分任務
-3. Frontend RD 實作 React UI
+3. Frontend RD 實作 Angular UI
 4. Backend RD 實作 Spring Boot API
 5. QA 驗收
 
@@ -113,7 +114,7 @@ codex
 ├─ .codex/agents/
 │  ├─ pm.toml
 │  ├─ sa.toml
-│  ├─ rd-frontend-react.toml
+│  ├─ rd-frontend-angular.toml
 │  ├─ rd-backend-java.toml
 │  └─ qa.toml
 ├─ docs/
