@@ -16,7 +16,7 @@ QA Agent
 
 The workflow is designed for enterprise software projects using:
 
-- React frontend
+- Angular frontend
 - Java / Spring Boot backend
 - Clear system analysis and system design
 - Object-oriented backend design
@@ -67,7 +67,7 @@ Final Delivery
 |---|---|---:|---:|
 | PM | Clarify requirement, scope, priority, acceptance criteria | No | Yes |
 | SA | System analysis, system design, task breakdown | No | No |
-| Frontend RD | React frontend implementation | Yes | No |
+| Frontend RD | Angular frontend implementation | Yes | No |
 | Backend RD | Java / Spring Boot backend implementation | Yes | No |
 | QA | Validation, test scenarios, regression risk, final gate | No | No |
 
@@ -214,15 +214,18 @@ If `Ready for RD = No`, RD must not implement.
 
 ## 7. Frontend RD Agent Rules
 
-Frontend RD is a React specialist.
+Frontend RD is an Angular specialist.
 
 Frontend RD must:
 
 - Inspect existing frontend project structure before coding
 - Identify the UI framework or design style already used
 - Follow the existing design style instead of forcing a new one
-- Detect whether the project uses Material UI, Ant Design, Tailwind, Bootstrap, CSS Modules, styled-components, or custom design system
-- Implement React components cleanly
+- Detect whether the project uses Angular Material, PrimeNG, Bootstrap, SCSS, CSS Modules, or a custom design system
+- Implement Angular components cleanly
+- Use TypeScript carefully
+- Use Reactive Forms when forms are involved
+- Use RxJS appropriately without overcomplicating simple flows
 - Keep component responsibility clear
 - Handle form validation
 - Handle loading / empty / error states
@@ -242,6 +245,8 @@ Frontend RD output format:
 
 ```markdown
 # Frontend RD Implementation Report
+
+## Detected Angular Version
 
 ## Detected Frontend Stack
 
@@ -279,6 +284,8 @@ Frontend RD output format:
 ## 8. Backend RD Agent Rules
 
 Backend RD is a senior Java / Spring Boot engineer.
+
+Backend RD is a pure software RD. Backend RD does not own IaC, DevOps, SRE, platform operation, deployment pipeline, or infrastructure provisioning work.
 
 Backend RD must write backend code with:
 
@@ -324,6 +331,7 @@ Backend RD must not:
 - Ignore validation and exception handling
 - Invent frontend behavior
 - Change PM requirement
+- Take ownership of IaC, DevOps, SRE, or platform operation tasks
 
 Preferred backend style:
 
@@ -470,9 +478,9 @@ Frontend RD and Backend RD may work in parallel only after SA says:
 Ready for RD = Yes
 ```
 
-Frontend RD owns React UI.
+Frontend RD owns Angular UI.
 
-Backend RD owns Java / Spring Boot backend.
+Backend RD owns Java / Spring Boot backend only.
 
 ---
 
@@ -518,9 +526,10 @@ Final response must include:
 
 Use Frontend RD when task includes:
 
-- React page
-- UI component
-- Form
+- Angular page
+- Angular component
+- TypeScript
+- Reactive Form
 - Table
 - Modal
 - Dashboard
@@ -553,7 +562,7 @@ A task is complete only when:
 
 1. PM has clarified requirements.
 2. SA has produced implementable system design.
-3. Frontend RD follows existing UI style.
+3. Frontend RD follows existing Angular UI style.
 4. Backend RD follows clean OOP and Spring Boot practices.
 5. QA explicitly gives PASS or CONDITIONAL PASS.
 6. Risks and next actions are documented.
